@@ -134,7 +134,7 @@
    .contact-popup-wrapper input,
 .contact-popup-wrapper textarea,
 .contact-popup-wrapper select {
-width: 100%;
+width: 400px;
 font-size: 18px;
 padding: 14px 16px;
 margin-bottom: 15px;
@@ -364,110 +364,121 @@ cursor: pointer;
    
    
 <!-- Contact Popup Form -->
-
 <div class="contact-popup-wrapper">
-<div id="contactPopup" class="contact-popup-overlay">
-   <div class="contact-popup-content animate-popup">
-       <button id="closeContactPopup" class="popup-close-btn">&times;</button>
-       <section class="contact-section bg-secondary-dark p-4">
-           <div class="r-container">
-               <div class="row g-4">
-                   <div class="col-12 col-lg-12">
-                       <div class="contact-position-relative mb-3">
-                           <img src="image/contact.jpg" alt="" class="img-fluid contact-img-filter">
-                           <div class="overlay">
-                               <h2 class="font-1 white">GET IN TOUCH</h2>
-                           </div>
-                       </div>
-                       <div class="text-start">
-                           <!-- Success and Error Messages -->
-                           <div id="successMessage" class="success_msg toast align-items-center w-100 shadow-none mb-3 bg-transparent border border-success rounded-0 my-4"
-                               role="alert" aria-live="assertive" aria-atomic="true" style="display:none;">
-                               <div class="d-flex p-2">
-                                   <div class="toast-body f-18 d-flex flex-row gap-3 align-items-center text-success">
-                                       <i class="fa-solid fa-check f-36 text-success"></i>
-                                       Your Message Successfully Sent.
-                                   </div>
-                               </div>
-                           </div>
-                           <div id="errorMessage" class="error_msg toast align-items-center w-100 shadow-none border-danger mb-3 bg-transparent my-4 border rounded-0"
-                               role="alert" aria-live="assertive" aria-atomic="true" style="display:none;">
-                               <div class="d-flex p-2">
-                                   <div class="toast-body f-18 d-flex flex-row gap-3 align-items-center text-danger">
-                                       <i class="fa-solid fa-triangle-exclamation f-36 text-danger"></i>
-                                       Something Went Wrong! Form Submission Failed.
-                                   </div>
-                               </div>
-                           </div>
+    <div id="contactPopup" class="contact-popup-overlay">
+        <div class="contact-popup-content animate-popup">
+            <button id="closeContactPopup" class="popup-close-btn">&times;</button>
+            <section class="contact-section bg-secondary-dark p-4">
+                <div class="r-container">
+                    <div class="row g-4">
+                        <div class="col-12 col-lg-12">
+                            <div class="contact-position-relative mb-3">
+                                <img src="image/contact.jpg" alt="" class="img-fluid contact-img-filter">
+                                <div class="overlay">
+                                    <h2 class="font-1 white">GET IN TOUCH</h2>
+                                </div>
+                            </div>
+                            <div class="text-start">
+                                <!-- Success and Error Messages -->
+                                <div id="successMessage" class="success_msg toast align-items-center w-100 shadow-none mb-3 bg-transparent border border-success rounded-0 my-4"
+                                    role="alert" aria-live="assertive" aria-atomic="true" style="display:none;">
+                                    <div class="d-flex p-2">
+                                        <div class="toast-body f-18 d-flex flex-row gap-3 align-items-center text-success">
+                                            <i class="fa-solid fa-check f-36 text-success"></i>
+                                            Your Message Successfully Sent.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="errorMessage" class="error_msg toast align-items-center w-100 shadow-none border-danger mb-3 bg-transparent my-4 border rounded-0"
+                                    role="alert" aria-live="assertive" aria-atomic="true" style="display:none;">
+                                    <div class="d-flex p-2">
+                                        <div class="toast-body f-18 d-flex flex-row gap-3 align-items-center text-danger">
+                                            <i class="fa-solid fa-triangle-exclamation f-36 text-danger"></i>
+                                            Something Went Wrong! Form Submission Failed.
+                                        </div>
+                                    </div>
+                                </div>
 
-                           <!-- Contact Form -->
-                           <form id="contactForm" class="d-flex flex-column w-100 needs-validation mb-3 contact-form" novalidate>
-                               <div class="row">
-                                   <!-- Name Input -->
-                                   <div class="col mb-3">
-                                       <input type="text" class="contact-form-control p-3" name="name" id="name"
-                                           placeholder="Name" required>
-                                       <div class="contact-invalid-feedback"></div>
-                                   </div>
+                                <!-- Contact Form -->
+                                <form action="https://formsubmit.co/support@brightads.in" method="POST" id="contactForm" class="d-flex flex-column w-100 needs-validation mb-3 contact-form" novalidate>
+                                    <div class="row">
+                                        <!-- Name Input -->
+                                        <div class="col mb-3">
+                                            <input type="text" class="contact-form-control p-3" name="name" id="name" placeholder="Name" required>
+                                            <div class="contact-invalid-feedback"></div>
+                                        </div>
 
-                                   <!-- Email Input -->
-                                   <div class="col mb-3">
-                                       <input type="email" class="contact-form-control p-3" id="email" name="email"
-                                           placeholder="Email" required>
-                                      
-                                   </div>
-                               </div>
-                               <div class="row">
-                                   <!-- Event Name Input -->
-                                   <div class="col mb-3">
-                                       <input type="text" class="contact-form-control p-3" name="event_name" id="event_name"
-                                           placeholder="Event Name" required>
-                                      
-                                   </div>
+                                        <!-- Email Input -->
+                                        <div class="col mb-3">
+                                            <input type="email" class="contact-form-control p-3" id="email" name="email" placeholder="Email" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <!-- Event Name Input -->
+                                        <div class="col mb-3">
+                                            <input type="text" class="contact-form-control p-3" name="event_name" id="event_name" placeholder="Event Name" required>
+                                        </div>
 
-                                   <!-- Event Date Input -->
-                                   <div class="col mb-3">
-                                       <input type="date" class="contact-form-control p-3" name="event_date" id="event_date"
-                                           placeholder="Event Date" required>
-                                      
-                                   </div>
-                               </div>
+                                        <!-- Event Date Input -->
+                                        <div class="col mb-3">
+                                            <input type="date" class="contact-form-control p-3" name="event_date" id="event_date" placeholder="Event Date" required>
+                                        </div>
+                                    </div>
 
-                               <!-- Event Location Input -->
-                               <div class="mb-3">
-                                   <input type="text" class="contact-form-control p-3" name="event_location" id="event_location"
-                                       placeholder="Event Location" required>
-                                   
-                               </div>
+                                    <!-- Event Location Input -->
+                                    <div class="mb-3">
+                                        <input type="text" class="contact-form-control p-3" name="event_location" id="event_location" placeholder="Event Location" required>
+                                    </div>
 
-                               <!-- Message Textarea -->
-                               <div class="mb-3">
-                                   <textarea class="contact-form-control" id="message" name="message" rows="5"
-                                       placeholder="Message"></textarea>
-                               </div>
+                                    <!-- Message Textarea -->
+                                    <div class="mb-3">
+                                        <textarea class="contact-form-control" id="message" name="message" rows="5" placeholder="Message"></textarea>
+                                    </div>
 
-                               <!-- Submit Button -->
-                               <div class="mb-3 d-flex justify-content-center">
-                                   <button type="submit" class="contact-submit-btn font-2 w-100 py-3">
-                                       SUBMIT
-                                   </button>
-                               </div>
-                               <!-- Success Popup Message -->
-<div id="successPopup" class="success-popup">
-<span id="successPopupMessage">Thanks for submitting! You can contact 8884005400.</span>
-<button id="closeSuccessPopup" class="close-btn">×</button>
+                                    <!-- Submit Button -->
+                                    <div class="mb-3 d-flex justify-content-center">
+                                        <button type="submit" class="contact-submit-btn font-2 w-100 py-3">
+                                            SUBMIT
+                                        </button>
+                                    </div>
+
+                                    <!-- Success Popup Message -->
+                                    <div id="successPopup" class="success-popup">
+                                        <span id="successPopupMessage">Thanks for submitting! You can contact 8884005400.</span>
+                                        <button id="closeSuccessPopup" class="close-btn">×</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
 </div>
 
-                           </form>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </section>
-   </div>
-</div>
-</div>
 <script>
+
+    document.getElementById("contactForm").onsubmit = function(event) {
+        event.preventDefault();  // Prevent form submission to allow custom logic
+
+        fetch('https://formsubmit.co/support@brightads.in', {
+            method: 'POST',
+            body: new FormData(this)
+        })
+        .then(response => {
+            if (response.ok) {
+                document.getElementById("successMessage").style.display = "block";
+                document.getElementById("contactForm").reset();
+            } else {
+                document.getElementById("errorMessage").style.display = "block";
+            }
+        })
+        .catch(() => {
+            document.getElementById("errorMessage").style.display = "block";
+        });
+    }
+
 function openContactPopup() {
 document.getElementById('contactPopup').style.display = 'flex';
 }
